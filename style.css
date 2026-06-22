@@ -1,6 +1,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#cececd;--surface:#FFFFFF;--surface2:#F0EEE9;
+  --bg:white;--surface:#FFFFFF;--surface2:#F0EEE9;
   --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.15);
   --text:#141413;--text2:#5C5B57;--text3:#9A9892;
   --accent:#141413;--accent-fg:#FFFFFF;--blue:#1A5BB5;
