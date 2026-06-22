@@ -1,0 +1,215 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F7F6F3;--surface:#FFFFFF;--surface2:#F0EEE9;
+  --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.15);
+  --text:#141413;--text2:#5C5B57;--text3:#9A9892;
+  --accent:#141413;--accent-fg:#FFFFFF;--blue:#1A5BB5;
+  --hi-bg:#FEF1F1;--hi-t:#9B2020;--hi-b:#F5C6C6;
+  --md-bg:#FEF6EA;--md-t:#8A5106;--md-b:#F5D9A0;
+  --lo-bg:#EDFAF3;--lo-t:#1A6B3A;--lo-b:#B4E8CC;
+  --radius:14px;--radius-sm:9px;--tr:0.18s ease;
+  --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:0 4px 20px rgba(0,0,0,0.08);
+}
+[data-dark]{
+  --bg:#111110;--surface:#1C1C1A;--surface2:#242422;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);
+  --text:#EEECEA;--text2:#9A9892;--text3:#5C5B57;
+  --accent:#EEECEA;--accent-fg:#111110;--blue:#5A9AE8;
+  --hi-bg:#2A1414;--hi-t:#F5A0A0;--hi-b:#5A2020;
+  --md-bg:#251C0D;--md-t:#F5C878;--md-b:#5A3D0D;
+  --lo-bg:#0D2018;--lo-t:#72D4A0;--lo-b:#1A5035;
+  --shadow:0 1px 3px rgba(0,0,0,0.3);--shadow-md:0 4px 20px rgba(0,0,0,0.4);
+}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background var(--tr),color var(--tr);-webkit-font-smoothing:antialiased}
+#preloader{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:whitesmoke;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  transition: opacity 0.5s ease;
+}
+
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgb(202, 201, 201);border-bottom:1px solid var(--border);height:58px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:background var(--tr),border-color var(--tr)}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo-mark{width:32px;height:32px;flex-shrink:0;display:block}
+.logo-icon-bg{fill:#141413}[data-dark] .logo-icon-bg{fill:#EEECEA}
+.logo-doc{fill:#EBF1FA}[data-dark] .logo-doc{fill:#1E2B45}
+.logo-la{fill:#A8C4E8}[data-dark] .logo-la{fill:#3A5A8A}
+.logo-lb{fill:#C8D8EE}[data-dark] .logo-lb{fill:#2D4870}
+.logo-lens{fill:#D0E4F7}[data-dark] .logo-lens{fill:#243650}
+.logo-ring{stroke:#1A5BB5}[data-dark] .logo-ring{stroke:#5A9AE8}
+.logo-hnd{stroke:#1A5BB5}[data-dark] .logo-hnd{stroke:#5A9AE8}
+.logo-chk{stroke:#1A5BB5}[data-dark] .logo-chk{stroke:#7BBFFF}
+.logo-moon{fill:#141413}[data-dark] .logo-moon{fill:#EEECEA}
+.logo-mooncut{fill:#EBF1FA}[data-dark] .logo-mooncut{fill:#1E2B45}
+.logo-star{fill:#141413}[data-dark] .logo-star{fill:#EEECEA}
+.logo-name{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.03em;line-height:1}
+.logo-clause{color:var(--text)}.logo-iq{color:var(--blue)}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 30px;
+}
+
+.hero{
+    margin-bottom:60%px;
+}
+
+.hero h1{
+    font-family:'Michroma', sans-serif;
+    font-size:clamp(2.2rem,6vw,5rem);
+    line-height:1.1;
+    letter-spacing:-2px;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:700px;
+    color:#555;
+    font-size:1.1rem;
+}
+
+.updates-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+    border:1px solid rgba(0,0,0,.08);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:50px;
+    background:#111;
+    color:white;
+    font-size:.75rem;
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-family:'Michroma', sans-serif;
+    font-size:1rem;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.footer{
+    margin-top:70px;
+    text-align:center;
+    color:#666;
+}
+
+.version{
+    font-family:'Michroma', sans-serif;
+    margin-bottom:10px;
+}
+/* for eye */
+.main .eye-container{
+  margin-left: -22%;
+  margin-bottom: 2%;
+}
+
+.eye-container {
+  display: flex;
+  gap: 55px;
+  z-index: 1;
+  
+}
+
+.eye {
+  width: 95px;
+  height: 95px;
+  background: #ffffff;
+  border-radius:100% ; 
+  position: relative;
+  overflow: hidden;
+  
+  box-shadow:
+    inset 0 0 14px rgba(0,0,0,0.35),
+    0 0 0 rgba(255,255,255,0);
+  transition: box-shadow 0.4s ease;
+  z-index: 3;
+
+}
+
+/* glow only on hover */
+.eye-container:hover .eye {
+  box-shadow:
+    inset 0 10px 14px rgba(0,0,0,0.35),
+    0 0 25px rgba(255,255,255,0.15);
+    animation: blink;
+    transition: transform 0.15s ease-out;
+}
+
+.pupil {
+  width: 32px;
+  height: 32px;
+  background: radial-gradient(circle at 30% 30%, #444, #000);
+  border-radius: 50%;
+  position: absolute;
+  top: 31px;
+  left: 31px;
+  transition: transform 0.15s ease-out;
+}
+
+/* eyelid blink */
+.lid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #1c1c1c, #000);
+  top: -100%;
+  left: 0;
+  animation: blink 5s infinite;
+ 
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+/* Close lid when hovering the eye */
+.eye-container:hover .lid  {
+  top: 0;
+  transition: top 0.20s ease-out;
+   animation:none;   /* stop blinking while hovered */
+}
+
+
+
+.eye-container:hover {
+  transform: scaleY(0.50);
+  transition: top 0.20s ease-out;
+}
+
+
+@keyframes blink {
+  0%, 93%, 100% { top: -100%; }
+  95% { top: 0%; }
+}
